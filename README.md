@@ -1,5 +1,5 @@
 # DiscordXPronote
----
+
 DiscordXPronote est un script Node.js qui permet de notifier automatiquement le menu de la cantine sur un serveur Discord, avec d'autres types de notifications à venir. Il utilise le wrapper [Pawnote](https://github.com/LiterateInk/Pawnote) pour interagir avec Pronote.
 
 ## Fonctionnalités
