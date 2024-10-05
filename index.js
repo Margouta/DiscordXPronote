@@ -1,0 +1,1 @@
+console.log("DiscordXPronote\n1. Notifier un menu : commande 'npm run menu'\n--\nhttps://github.com/Margouta/DiscordXPronote/")
