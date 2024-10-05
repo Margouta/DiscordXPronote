@@ -33,11 +33,11 @@ Avant de démarrer, assurez-vous d'avoir installé les éléments suivants :
 3. Modifiez le fichier `example.env` avec les variables suivantes :
 
     ```bash
-    DISCORD_TOKEN=VotreTokenDeBot
-    CHANNEL_ID=IDDuCanalDiscord
-    PRONOTE_URL=LienDeVotreEspacePronote
-    PRONOTE_USERNAME=VotreNomDUtilisateur
-    PRONOTE_PASSWORD=VotreMotDePasse
+    PRN_URL=https://rne.index-education.net/pronote?login=true # MODIFIER PAR VOTRE RNE
+    PRN_UUID= # UUID ALEATOIRE 
+    PRN_USERNAME= # USERNAME PRONOTE EN CONNEXION DIRECTE (SANS PASSER PAR L'ENT/EDUCONNECT)
+    PRN_PASSWORD= # MOT DE PASSE PRONOTE EN CONNEXION DIRECTE (SANS PASSER PAR L'ENT/EDUCONNECT)
+    DISCORD_WEBHOOK_MENU=https://discord.com/api/webhooks/ # WEBHOOK DISCORD POUR LES NOTIFICATIONS DES MENUS
     ```
 
 4. Lancez le script :
