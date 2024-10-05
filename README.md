@@ -12,7 +12,7 @@ Avant de démarrer, assurez-vous d'avoir installé les éléments suivants :
 
 - [Node.js](https://nodejs.org/) (version 16 ou plus)
 - [npm](https://www.npmjs.com/) (ou `yarn`)
-- Un serveur Discord avec un bot configuré et des autorisations d'envoi de messages
+- Un serveur Discord avec un webhook configuré
 - Un accès à un compte Pronote valide
 
 ## Installation
