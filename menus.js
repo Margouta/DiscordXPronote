@@ -13,14 +13,13 @@ function sendWebhook(json, webhook) {
   function getLabels(item) {
     return item.labels.map(label => labels[label.name] || "").join(" ");
   }
-
-  const entree_midi = json.lunch.entry.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-  const plat_midi = json.lunch.main.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-  const accompagnement_midi = json.lunch.side.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-  const vegetarien_midi = json.lunch.drink.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-  const fromage_midi = json.lunch.fromage.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-  const dessert_midi = json.lunch.dessert.map(item => `${item.name} ${getLabels(item)}`).join("\n- ");
-
+  const name_midi = json.lunch.name ? " "+json.lunch.name : "";
+  const entree_midi = json.lunch.entry ? json.lunch.entry.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
+  const plat_midi = json.lunch.main ? json.lunch.main.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
+  const accompagnement_midi = json.lunch.side ? json.lunch.side.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
+  const vegetarien_midi = json.lunch.drink ? json.lunch.drink.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
+  const fromage_midi = json.lunch.fromage ? json.lunch.fromage.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
+  const dessert_midi = json.lunch.dessert ? json.lunch.dessert.map(item => `${item.name} ${getLabels(item)}`).join("\n- ") : "⛔";
   fetch(webhook, {
     method: "POST",
     headers: {
@@ -30,7 +29,7 @@ function sendWebhook(json, webhook) {
       "content": "<@&1291906995678351470>\n# Menu du jour !\n-# Fait maison - Recette du chef : <:maison:1291900933881729054>   |  Assemblé sur place : <:assembl:1291900930807042099> \n-# Issu de l'Agriculture Biologique : <:bio:1291900935769030791> |  Produits locaux : <:locaux:1291900932145287219>",
       "embeds": [
         {
-          "description": "## Repas du midi",
+          "description": `## Repas du midi / ${name_midi}`,
           "color": 37143,
           "fields": [
             {
